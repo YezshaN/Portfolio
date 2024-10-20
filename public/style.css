@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins font */
+    background-color: #F0EBD8;
+    color: #333; /* Text color */
+}
+
+header {
+    background-color: #5E646E; /* Navigation bar color */
+    padding: 15px;
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Aligns it to the right */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add margin to the main content to prevent overlap with fixed navbar */
+main {
+    margin-top: 70px; /* Adjust based on header height */
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px; 
+    text-decoration: none; 
+}
+
+.logo-text {
+    font-size: 20px; 
+    color: #C5B4A6; 
+    font-weight: bold; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+    margin-right: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #C5B4A6; /* Link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is applied to links */
+    font-weight: 700; /* Optional: Make links bold */
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: #DEDFE3; /* Hover color */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5E646E;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #F0EBD8;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color:#9B7E66;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+ /*LOGIN CSS*/
+
+
+ .login-container {
+    width: 350px; /* Increased width for a larger container */
+    margin: 120px auto; /* Kept the top margin for centering */
+    padding: 40px; /* Increased padding for more space inside */
+    background-color: #5E646E;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    border-radius: 8px; /* Softer look */
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #fff; /* Heading color */
+    font-size: 26px; /* Increased font size for better visibility */
+    margin-bottom: 20px; /* Margin below heading */
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd; /* Lighter shade for contrast */
+}
+
+.login-container input[type="text"],
+.login-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9B7E66; /* Border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Transition for a smoother effect */
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="number"]:focus {
+    border-color: #9B7E66; /* Focus border color */
+    outline: none; /* Remove default outline */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9B7E66; /* Updated button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.login-container button:hover {
+    background-color: #d0c1a5; /* Darker shade on hover */
+}
+
+/* Error Message Styles */
+.login-alert {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8d7da; /* Error message background color */
+    color: #721c24; /* Error message text color */
+    border: 1px solid #f5c6cb; /* Error message border color */
+    border-radius: 4px;
+}
+
+.login-alert ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*HOME PAGE CSS*/
+
+
+.container {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center content */
+    align-items: flex-start; /* Align items to the top */
+    position: relative; /* Allow absolute positioning of shapes */
+    padding: 20px; /* Add padding to avoid overlap */
+}
+
+.photo-card {
+    background-color: #5E646E; /* Light color from your palette */
+    padding: 10px; /* Adjust padding to make the card smaller */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-right: 40px; /* Space between photo and text */
+    margin-left: 65px;
+    margin-top: 40px;
+    flex: 0 0 400px; /* Set a fixed width for the photo card */
+    max-width: 400px; /* Max width to prevent overflow */
+}
+
+.photo-card img {
+    width: 100%; /* Maximize width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for the photo */
+}
+
+.text-content {
+    color: #5E646E; /* Text color */
+    text-align: left; /* Align text to the left */
+    margin-top: 70px;
+}
+
+.text-content p {
+    color: #606164; /* Subtle text color */
+    margin-top: 30px;
+    margin-right: 300px;
+}
+
+.shapes {
+    position: absolute; /* Overlay shapes */
+    top: 20%;
+    right: 10%;
+    z-index: -1; /* Behind other content */
+}
+
+.line {
+    width: 8px;
+    height: 200px;
+    background-color: #C5B4A6; /* Line color */
+    position: absolute;
+    left: -40px; /* Position adjustment */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #9B7E66; /* Circle color */
+    border-radius: 50%; /* Circular shape */
+    position: absolute;
+    top: 60px; /* Position adjustment */
+    right: -40px; /* Position adjustment */
+}
+
+.rectangle {
+    width: 150px;
+    height: 50px;
+    background-color: #5E646E; /* Rectangle color */
+    position: absolute;
+    bottom: 20%; /* Position adjustment */
+    right: -20px; /* Position adjustment */
+}
+
+
+/*---WORKS PAGE CSS---*/
+
+/* Main Container */
+.works-container {
+    padding: 60px 20px; /* Add padding to avoid overlap */
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Title */
+.works-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #5E646E; /* Title color */
+    font-size: 36px; /* Increased title size */
+    position: relative;
+}
+
+/* Work Preview Section */
+.work-preview {
+    display: flex;
+    align-items: center;
+    background-color: #F7F5F2; /* Light background for preview section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 40px; /* Space between each work */
+    padding: 20px; /* Add padding inside the preview section */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.work-preview:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Photo Card */
+.work-photo {
+    flex: 0 0 200px; /* Fixed width for the photo */
+    max-width: 200px; /* Max width to prevent overflow */
+    margin-right: 20px; /* Space between photo and text */
+    position: relative;
+}
+
+/* Photo Border */
+.work-photo::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px; /* Match preview section */
+    border: 2px solid rgba(94, 100, 110, 0.4); /* Soft border */
+    transition: transform 0.3s ease; /* Animation */
+}
+
+.work-photo:hover::before {
+    transform: scale(1.05); /* Slightly enlarge border on hover */
+}
+
+.work-photo img {
+    width: 100%; /* Maximize width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the photo */
+}
+
+/* Preview Text */
+.work-text {
+    flex: 1; /* Allow text to take up more space */
+}
+
+.work-text h2 {
+    font-size: 24px;
+    color: #5E646E;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Animated Underline */
+.work-text h2::after {
+    content: '';
+    display: block;
+    width: 50px; /* Underline width */
+    height: 3px; /* Underline height */
+    background-color: #5E646E; /* Underline color */
+    margin-top: 5px;
+    transition: width 0.3s ease; /* Animation */
+}
+
+.work-text h2:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+.work-text p {
+    font-size: 16px;
+    color: #606164;
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Download Button */
+.link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5E646E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform animation */
+}
+
+.link-button:hover {
+    background-color: #9B7E66; /* Hover effect for button */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+
+/*ABOUT PAGE CSS*/
+
+.about-container {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center content */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding to avoid overlap */
+}
+
+.about-card {
+    background-color: #5E646E; /* Light color from your palette */
+    padding: 10px; /* Adjust padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-top: 20px;
+    margin-right: 60px; /* Space between photo and text */
+    margin-left: 40px;
+    flex: 0 0 400px; /* Set a fixed width for the photo card */
+    max-width: 400px; /* Max width to prevent overflow */
+}
+
+.about-card img {
+    width: 100%; /* Maximize width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for the photo */
+}
+
+.about-content {
+    color: #5E646E; /* Text color */
+    text-align: center; /* Align text to the left */
+    flex: 2; /* Allow text to take up more space */
+    margin-top: 50px; /* Adjust margin */
+}
+
+.about-content h1 {
+    font-size: 32px; /* Title size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.about-content p {
+    color: #606164; /* Subtle text color */
+    margin-top: 15px; /* Space above paragraphs */
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 1.6; /* Improved readability */
+}
+
+.social-icons {
+    display: center; /* Flexbox for icons */
+    margin-top: 50px; /* Space above icons */
+}
+
+.social-icons a {
+    margin-right: 50px; /* Space between icons */
+    margin-left: 50px;
+}
+
+.social-icons img {
+    width: 30px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Enlarge icon on hover */
+}
+
+
+/*CONTACT PAGE CSS*/
+
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    margin:auto; /* Center the form */
+    padding: 40px; /* Reduce padding for spacious feel */
+    background-color: #F0EBD8; /* Slightly transparent background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* Soft white shadow */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.contact-info {
+    flex: 1; /* Take up 1 part of the flex container */
+    padding-right: 80px; /* Space between text and form */
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.contact-form {
+    flex: 2; /* Take up 2 parts of the flex container */
+    margin-top: 50px;
+}
+
+.contact-container h2 {
+    font-size: 28px; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-container p {
+    margin: 10px 0; /* Space above and below paragraphs */
+    font-size: 16px; /* Font size for contact info */
+    color: #5E646E; /* Lighter color for contact info */
+}
+
+.form-row {
+    display: flex; /* Use flexbox for rows */
+    justify-content: space-between; /* Space between columns */
+}
+
+.form-column {
+    flex: 1; /* Each column takes equal space */
+    margin-right: 15px; /* Space between columns */
+}
+
+.form-column:last-child {
+    margin-right: 0; /* Remove margin from the last column */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between fields */
+}
+
+label {
+    display: block; /* Full width */
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold labels */
+    color: #5E646E; /* White color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Inner padding */
+    border: 1px solid #5E646E; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    background-color: #5E646E(255, 255, 255, 0.2); /* Slightly transparent background */
+    color: #5E646E; /* White text color */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #5E646E; /* Border color on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    width: auto; /* Button size will be auto */
+    padding: 10px 20px; /* Smaller padding for a smaller button */
+    background-color: #5E646E; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #9B7E66; /* Darker shade on hover */
+}
+
+.alert {
+    margin-top: 10px; /* Space above the alert */
+    padding: 10px; /* Inner padding */
+    color: #d9534f; /* Alert text color */
+    background-color: rgba(255, 0, 0, 0.2); /* Light red alert background */
+    border: 1px solid #d9534f; /* Border for alert */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer */
+
+footer {
+    background-color: #5E646E; /* Footer color from your palette */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #d2c0b1; /* Footer text color */
+}
+
+
